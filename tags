@@ -1,0 +1,102 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+-format	GNUmakefile	/^	git archive --format=tar HEAD | gzip > lab$(LAB)-handin.tar.gz$/;"	m
+-prefix	GNUmakefile	/^	git archive --prefix=lab$(LAB)\/ --format=tar HEAD | gzip > lab$(LAB)-handin.tar.gz$/;"	m
+AR	GNUmakefile	/^AR	:= $(GCCPREFIX)ar$/;"	m
+AS	GNUmakefile	/^AS	:= $(GCCPREFIX)as$/;"	m
+BACKTRACE_RE	grade-lab1	/^BACKTRACE_RE = r"^ *ebp +f01[0-9a-z]{5} +eip +f0100[0-9a-z]{3} +args +([0-9a-z]+)"$/;"	v
+CC	GNUmakefile	/^CC	:= $(GCCPREFIX)gcc -pipe$/;"	m
+CFLAGS	GNUmakefile	/^CFLAGS := $(CFLAGS) $(DEFS) $(LABDEFS) -O1 -fno-builtin -I$(TOP) -MD$/;"	m
+COLORS	gradelib.py	/^COLORS = {"default": "\\033[0m", "red": "\\033[31m", "green": "\\033[32m"}$/;"	v
+CURRENT_TEST	gradelib.py	/^CURRENT_TEST = None$/;"	v
+GCCPREFIX	GNUmakefile	/^GCCPREFIX := $(shell if i386-jos-elf-objdump -i 2>&1 | grep '^elf32-i386$$' >\/dev\/null 2>&1; \\$/;"	m
+GCC_LIB	GNUmakefile	/^GCC_LIB := $(shell $(CC) $(CFLAGS) -print-libgcc-file-name)$/;"	m
+GDBClient	gradelib.py	/^class GDBClient(object):$/;"	c
+GDBPORT	GNUmakefile	/^GDBPORT	:= $(shell expr `id -u` % 5000 + 25000)$/;"	m
+IMAGES	GNUmakefile	/^IMAGES = $(OBJDIR)\/kern\/kernel.img$/;"	m
+KERN_CFLAGS	GNUmakefile	/^KERN_CFLAGS := $(CFLAGS) -DJOS_KERNEL -gstabs$/;"	m
+LABSETUP	GNUmakefile	/^LABSETUP ?= .\/$/;"	m
+LD	GNUmakefile	/^LD	:= $(GCCPREFIX)ld$/;"	m
+LDFLAGS	GNUmakefile	/^LDFLAGS := -m elf_i386$/;"	m
+MAKE_TIMESTAMP	gradelib.py	/^MAKE_TIMESTAMP = 0$/;"	v
+NATIVE_CFLAGS	GNUmakefile	/^NATIVE_CFLAGS := $(CFLAGS) $(DEFS) $(LABDEFS) -I$(TOP) -MD -Wall$/;"	m
+NCC	GNUmakefile	/^NCC	:= gcc $(CC_VER) -pipe$/;"	m
+NM	GNUmakefile	/^NM	:= $(GCCPREFIX)nm$/;"	m
+OBJCOPY	GNUmakefile	/^OBJCOPY	:= $(GCCPREFIX)objcopy$/;"	m
+OBJDIR	GNUmakefile	/^OBJDIR := obj$/;"	m
+OBJDIRS	GNUmakefile	/^OBJDIRS :=$/;"	m
+OBJDUMP	GNUmakefile	/^OBJDUMP	:= $(GCCPREFIX)objdump$/;"	m
+PERL	GNUmakefile	/^PERL	:= perl$/;"	m
+QEMU	GNUmakefile	/^QEMU := $(shell if which qemu > \/dev\/null; \\$/;"	m
+QEMU	gradelib.py	/^class QEMU(object):$/;"	c
+QEMUOPTS	GNUmakefile	/^QEMUOPTS = -hda $(OBJDIR)\/kern\/kernel.img -serial mon:stdio -gdb tcp::$(GDBPORT)$/;"	m
+Runner	gradelib.py	/^class Runner():$/;"	c
+TAR	GNUmakefile	/^TAR	:= gtar$/;"	m
+TESTS	gradelib.py	/^TESTS = []$/;"	v
+TOP	GNUmakefile	/^TOP = .$/;"	m
+TerminateTest	gradelib.py	/^class TerminateTest(Exception):$/;"	c
+ULDFLAGS	GNUmakefile	/^ULDFLAGS := -T user\/user.ld$/;"	m
+USER_CFLAGS	GNUmakefile	/^USER_CFLAGS := $(CFLAGS) -DJOS_USER -gstabs$/;"	m
+WEBSUB	GNUmakefile	/^WEBSUB = https:\/\/ccutler.scripts.mit.edu\/6.828\/handin.py$/;"	m
+_GDBPORT	gradelib.py	/^    _GDBPORT = None$/;"	v	class:QEMU
+__all__	gradelib.py	/^__all__ = []$/;"	v
+__init__	gradelib.py	/^    def __init__(self, *default_monitors):$/;"	m	class:Runner
+__init__	gradelib.py	/^    def __init__(self, *make_args):$/;"	m	class:QEMU
+__init__	gradelib.py	/^    def __init__(self, port, timeout=15):$/;"	m	class:GDBClient
+__monitor_start	gradelib.py	/^    def __monitor_start(self, output):$/;"	m	class:Runner	file:
+__react	gradelib.py	/^    def __react(self, reactors, timeout):$/;"	m	class:Runner	file:
+__send	gradelib.py	/^    def __send(self, cmd):$/;"	m	class:GDBClient	file:
+__send_break	gradelib.py	/^    def __send_break(self):$/;"	m	class:GDBClient	file:
+assert_equal	gradelib.py	/^def assert_equal(got, expect, msg=""):$/;"	f
+assert_lines_match	gradelib.py	/^def assert_lines_match(text, *regexps, **kw):$/;"	f
+assert_lines_match_kw	gradelib.py	/^    def assert_lines_match_kw(no=[]):$/;"	f	function:assert_lines_match
+breakpoint	gradelib.py	/^    def breakpoint(self, addr):$/;"	m	class:GDBClient
+call_on_line	gradelib.py	/^def call_on_line(regexp, callback):$/;"	f
+close	gradelib.py	/^    def close(self):$/;"	m	class:GDBClient
+color	gradelib.py	/^def color(name, text):$/;"	f
+cont	gradelib.py	/^    def cont(self):$/;"	m	class:GDBClient
+end_part	gradelib.py	/^def end_part(name):$/;"	f
+fileno	gradelib.py	/^    def fileno(self):$/;"	f
+fileno	gradelib.py	/^    def fileno(self):$/;"	m	class:GDBClient
+get_current_test	gradelib.py	/^def get_current_test():$/;"	f
+get_gdb_port	gradelib.py	/^    def get_gdb_port():$/;"	f
+handle_output	gradelib.py	/^        def handle_output(output):$/;"	f	function:call_on_line.setup_call_on_line
+handle_read	gradelib.py	/^    def handle_read(self):$/;"	f
+handle_read	gradelib.py	/^    def handle_read(self):$/;"	m	class:GDBClient
+kill	gradelib.py	/^    def kill(self):$/;"	f
+make	gradelib.py	/^def make(*target):$/;"	f
+match	gradelib.py	/^    def match(self, *args, **kwargs):$/;"	m	class:Runner
+maybe_unlink	gradelib.py	/^def maybe_unlink(*paths):$/;"	f
+post_make	gradelib.py	/^def post_make():$/;"	f
+pre_make	gradelib.py	/^def pre_make():$/;"	f
+r	grade-lab1	/^r = Runner(save("jos.out"),$/;"	v
+readdeps	mergedep.pl	/^sub readdeps {$/;"	s
+register_test	gradelib.py	/^    def register_test(fn, title=title):$/;"	f	function:test
+reset_fs	gradelib.py	/^def reset_fs():$/;"	f
+run_qemu	gradelib.py	/^    def run_qemu(self, *monitors, **kw):$/;"	m	class:Runner
+run_qemu_kw	gradelib.py	/^        def run_qemu_kw(target_base="qemu", make_args=[], timeout=30):$/;"	f	function:Runner.run_qemu
+run_test	gradelib.py	/^        def run_test():$/;"	f	function:test.register_test
+run_tests	gradelib.py	/^def run_tests():$/;"	f
+save	gradelib.py	/^def save(path):$/;"	f
+save_on_finish	gradelib.py	/^    def save_on_finish(fail):$/;"	f	function:save
+setup_breakpoint	gradelib.py	/^    def setup_breakpoint(runner):$/;"	f	function:stop_breakpoint
+setup_call_on_line	gradelib.py	/^    def setup_call_on_line(runner):$/;"	f	function:call_on_line
+setup_save	gradelib.py	/^    def setup_save(runner):$/;"	f	function:save
+show_command	gradelib.py	/^def show_command(cmd):$/;"	f
+show_part	gradelib.py	/^    def show_part():$/;"	f	function:end_part
+stop	gradelib.py	/^    def stop(line):$/;"	f	function:stop_on_line
+stop_breakpoint	gradelib.py	/^def stop_breakpoint(addr):$/;"	f
+stop_on_line	gradelib.py	/^def stop_on_line(regexp):$/;"	f
+test	gradelib.py	/^def test(points, title=None, parent=None):$/;"	f
+test_backtrace_arguments	grade-lab1	/^def test_backtrace_arguments():$/;"	f
+test_backtrace_count	grade-lab1	/^def test_backtrace_count():$/;"	f
+test_backtrace_lines	grade-lab1	/^def test_backtrace_lines():$/;"	f
+test_backtrace_symbols	grade-lab1	/^def test_backtrace_symbols():$/;"	f
+test_jos	grade-lab1	/^def test_jos():$/;"	f
+test_printf	grade-lab1	/^def test_printf():$/;"	f
+user_test	gradelib.py	/^    def user_test(self, binary, *monitors, **kw):$/;"	m	class:Runner
+wait	gradelib.py	/^    def wait(self):$/;"	f

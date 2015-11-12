@@ -6,6 +6,8 @@
 
 #include <kern/monitor.h>
 #include <kern/console.h>
+#include <kern/pmap.h>
+#include <kern/kclock.h>
 
 // Test the stack backtrace function (lab 1 only)
 void
@@ -37,7 +39,7 @@ i386_init(void)
 
 	// Test the stack backtrace function (lab 1 only)
 	test_backtrace(5);
-
+	mem_init();
 	// Drop into the kernel monitor.
 	while (1)
 		monitor(NULL);
