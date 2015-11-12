@@ -1,4 +1,4 @@
 # jos
 MIT-JOS
-the lab1 files
+the lab2 files
 The modified code is kern/pmap.c
