@@ -10,6 +10,8 @@
 #include <kern/console.h>
 #include <kern/monitor.h>
 #include <kern/kdebug.h>
+#include <kern/trap.h>
+
 #define CMDBUF_SIZE	80	// enough for one VGA text line
 
 
@@ -59,7 +61,7 @@ int
 mon_backtrace(int argc, char **argv, struct Trapframe *tf)
 {
 	// Your code here.
-    // until the ebp stored is 0x00, we reach the end
+	// until the ebp stored is 0x00, we reach the end
 	struct Eipdebuginfo temp;
 	int *cur_ebp;
 	int *pre_ebp;
@@ -138,6 +140,8 @@ monitor(struct Trapframe *tf)
 	cprintf("Welcome to the JOS kernel monitor!\n");
 	cprintf("Type 'help' for a list of commands.\n");
 
+	if (tf != NULL)
+		print_trapframe(tf);
 
 	while (1) {
 		buf = readline("K> ");
