@@ -4,6 +4,7 @@
 #include <inc/memlayout.h>
 #include <inc/trap.h>
 
+#include <kern/picirq.h>
 
 
 ###################################################################
@@ -73,22 +74,22 @@
 	TRAPHANDLER_NOEC(trap_handler_placeholder29,29)
 	TRAPHANDLER_NOEC(trap_handler_placeholder30,30)
 	TRAPHANDLER_NOEC(trap_handler_placeholder31,31)
-	TRAPHANDLER_NOEC(trap_handler_placeholder32,32)
-	TRAPHANDLER_NOEC(trap_handler_placeholder33,33)
-	TRAPHANDLER_NOEC(trap_handler_placeholder34,34)
-	TRAPHANDLER_NOEC(trap_handler_placeholder35,35)
-	TRAPHANDLER_NOEC(trap_handler_placeholder36,36)
-	TRAPHANDLER_NOEC(trap_handler_placeholder37,37)
-	TRAPHANDLER_NOEC(trap_handler_placeholder38,38)
-	TRAPHANDLER_NOEC(trap_handler_placeholder39,39)
-	TRAPHANDLER_NOEC(trap_handler_placeholder40,40)
-	TRAPHANDLER_NOEC(trap_handler_placeholder41,41)
-	TRAPHANDLER_NOEC(trap_handler_placeholder42,42)
-	TRAPHANDLER_NOEC(trap_handler_placeholder43,43)
-	TRAPHANDLER_NOEC(trap_handler_placeholder44,44)
-	TRAPHANDLER_NOEC(trap_handler_placeholder45,45)
-	TRAPHANDLER_NOEC(trap_handler_placeholder46,46)
-	TRAPHANDLER_NOEC(trap_handler_placeholder47,47)
+	TRAPHANDLER_NOEC(routine_irq0,IRQ_OFFSET)
+	TRAPHANDLER_NOEC(routine_irq1,IRQ_OFFSET+1)
+	TRAPHANDLER_NOEC(routine_irq2,IRQ_OFFSET+2)
+	TRAPHANDLER_NOEC(routine_irq3,IRQ_OFFSET+3)
+	TRAPHANDLER_NOEC(routine_irq4,IRQ_OFFSET+4)
+	TRAPHANDLER_NOEC(routine_irq5,IRQ_OFFSET+5)
+	TRAPHANDLER_NOEC(routine_irq6,IRQ_OFFSET+6)
+	TRAPHANDLER_NOEC(routine_irq7,IRQ_OFFSET+7)
+	TRAPHANDLER_NOEC(routine_irq8,IRQ_OFFSET+8)
+	TRAPHANDLER_NOEC(routine_irq9,IRQ_OFFSET+9)
+	TRAPHANDLER_NOEC(routine_irq10,IRQ_OFFSET+10)
+	TRAPHANDLER_NOEC(routine_irq11,IRQ_OFFSET+11)
+	TRAPHANDLER_NOEC(routine_irq12,IRQ_OFFSET+12)
+	TRAPHANDLER_NOEC(routine_irq13,IRQ_OFFSET+13)
+	TRAPHANDLER_NOEC(routine_irq14,IRQ_OFFSET+14)
+	TRAPHANDLER_NOEC(routine_irq15,IRQ_OFFSET+15)
 	TRAPHANDLER_NOEC(system_call, T_SYSCALL)				# system call
 	TRAPHANDLER_NOEC(trap_handler_placeholder49,49)
 	TRAPHANDLER_NOEC(trap_handler_placeholder50,50)
@@ -335,22 +336,22 @@ idt_entries:
   .long trap_handler_placeholder29
   .long trap_handler_placeholder30
   .long trap_handler_placeholder31
-  .long trap_handler_placeholder32
-  .long trap_handler_placeholder33
-  .long trap_handler_placeholder34
-  .long trap_handler_placeholder35
-  .long trap_handler_placeholder36
-  .long trap_handler_placeholder37
-  .long trap_handler_placeholder38
-  .long trap_handler_placeholder39
-  .long trap_handler_placeholder40
-  .long trap_handler_placeholder41
-  .long trap_handler_placeholder42
-  .long trap_handler_placeholder43
-  .long trap_handler_placeholder44
-  .long trap_handler_placeholder45
-  .long trap_handler_placeholder46
-  .long trap_handler_placeholder47
+  .long routine_irq0
+  .long routine_irq1
+  .long routine_irq2
+  .long routine_irq3
+  .long routine_irq4
+  .long routine_irq5
+  .long routine_irq6
+  .long routine_irq7
+  .long routine_irq8
+  .long routine_irq9
+  .long routine_irq10
+  .long routine_irq11
+  .long routine_irq12
+  .long routine_irq13
+  .long routine_irq14
+  .long routine_irq15
   .long system_call
   .long trap_handler_placeholder49
   .long trap_handler_placeholder50
